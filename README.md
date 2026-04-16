@@ -1,37 +1,59 @@
-🛒 Mi Proyecto: CampusShop
-¡Hola! Soy Allison y este es mi proyecto CampusShop. Es una tienda virtual que hice para la universidad, pensada para que los estudiantes puedan comprar y vender cosas dentro del campus.
+# 🛒 CAMPUSSHOP
+## 🎓 E-Commerce Académico | Mobile-First
 
-Lo más importante de este trabajo es que no usé nada de JavaScript. Todo lo que ves funciona solo con HTML5 y CSS3. Me enfoqué en que se vea exactamente como los diseños que nos dieron y que funcione bien en cualquier celular sin que se mueva nada.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) 
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) 
+![Git](https://img.shields.io/badge/GIT-F05032?style=for-the-badge&logo=git&logoColor=white)
 
-Lo que hice en este proyecto
+---
 
-Diseño para celular: Todo está hecho "mobile-first", así que se adapta perfecto a la pantalla de cualquier teléfono.
+### 📝 SOBRE EL PROYECTO
+¡Hola! Soy **Allison**, estudiante de Ingeniería en Sistemas. Este es mi proyecto **CampusShop**, una plataforma diseñada para facilitar la compra y venta de productos dentro del entorno universitario.
 
+> [!IMPORTANT]
+> **RETO TÉCNICO:** Este proyecto es una maquetación integral realizada **exclusivamente con HTML5 y CSS3**. El desafío fue replicar un prototipo profesional y simular la navegación de una tienda real **sin utilizar JavaScript**.
 
-Puro HTML y CSS: Usé etiquetas semánticas y dividí mis estilos en varios archivos CSS para que todo esté bien organizado.
+---
 
+### 🚀 CARACTERÍSTICAS PRINCIPALES
 
-Navegación: Aunque no tiene lógica de programación real, puedes navegar por todas las páginas: el Inicio, el Catálogo, ver los productos, el Carrito y hasta el Perfil.
+* **📱 Enfoque Mobile-First:** Diseñado específicamente para que la experiencia en celulares sea fluida y cómoda.
+* **🏗️ Estructura Semántica:** Uso correcto de etiquetas HTML para un código limpio y profesional.
+* **🎨 Diseño Fiel al Mockup:** Replicación exacta de colores (paleta clara con acentos azules), sombras suaves y tipografía.
+* **🧩 CSS Modular:** Estilos organizados para que el mantenimiento sea sencillo.
 
+---
 
-Estilo Visual: Respeté los colores claros con toques azules/morados y los iconos sencillos que pedía el diseño.
+### 📂 VISTAS DESARROLLADAS
 
- Cómo está organizado
+He trabajado en la maquetación de **8 pantallas clave** para el flujo de la tienda:
 
-Páginas: Tengo listos los archivos index.html, catalogo.html, producto.html, carrito.html, checkout.html, perfil.html, historial.html y la página de carrito vacío.
+| Sección | Funcionalidad |
+| :--- | :--- |
+| **🏠 Home** | Buscador principal y categorías rápidas. |
+| **👕 Catálogo** | Grid de productos con badges de "Oferta". |
+| **🔍 Producto** | Vista a detalle con selección de tallas. |
+| **🛒 Carrito** | Gestión visual de artículos y subtotales. |
+| **💳 Checkout** | Formulario de pago y confirmación. |
+| **👤 Perfil** | Datos del usuario y configuración. |
+| **📜 Historial** | Registro de estados de pedidos. |
+| **🏜️ Vacíos** | Pantallas de cortesía cuando no hay datos. |
 
+---
 
-Estilos: En la carpeta css/ separé todo por base, layout, componentes y la parte responsive para que el código sea limpio.
+### 🛠️ TECNOLOGÍAS Y HERRAMIENTAS
 
+* **HTML5** - Estructura y semántica.
+* **CSS3** - Flexbox, Grid y Media Queries.
+* **VS Code** - Entorno de desarrollo.
+* **GitHub** - Control de versiones y hosting.
 
-Imágenes: En la carpeta img/ guardé todos los logos y las fotos de la ropa que estoy usando.
+---
 
-Detalles especiales
+### ⚙️ CÓMO EJECUTARLO
+1. Descarga o clona el repositorio.
+2. Abre el archivo `index.html` en tu navegador.
+3. ¡Explora la interfaz navegando por los diferentes botones!
 
-Menú desplegable: Hice que el menú lateral funcione para moverse entre categorías.
-
-
-Botones: Los botones de "Agregar al carrito" o "Pagar" te llevan a las siguientes pantallas para simular cómo funcionaría una tienda de verdad.
-
-
-Sin JS: Todo el movimiento y los efectos cuando pasas el mouse son solo con CSS.
+---
+**Desarrollado con pasión por [Allison R. Vargas](https://github.com/allisonrvargas)**
