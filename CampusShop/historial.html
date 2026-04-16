@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusShop – Historial de Pedidos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --verde: #2D5016;
+      --blanco: #ffffff;
+      --gris-bg: #f5f5f5;
+      --texto: #1a1a1a;
+      --radius: 14px;
+      --nav-h: 68px;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--gris-bg);
+      color: var(--texto);
+    }
+
+    .container {
+      max-width: 430px;
+      margin: 0 auto;
+      background: var(--gris-bg);
+      min-height: 100vh;
+    }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      height: 60px;
+      background: var(--verde);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .page-header__back {
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      padding: 4px;
+    }
+
+    .page-header__title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .page-header__right { width: 32px; }
+
+    /* ── MAIN ── */
+    .main {
+      padding: 16px 16px calc(var(--nav-h) + 16px);
+    }
+
+    /* ── HISTORIAL LIST ── */
+    .historial-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* ── PEDIDO CARD ── */
+    .pedido-card {
+      background: var(--blanco);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    .pedido-card__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .pedido-card__orden {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--texto);
+    }
+
+    .pedido-card__total {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--verde);
+    }
+
+    .pedido-card__fecha {
+      font-size: 0.8rem;
+      color: #888;
+      margin-bottom: 12px;
+    }
+
+    .pedido-card__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* ── ESTADO BADGES ── */
+    .estado-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 50px;
+    }
+
+    .estado-badge.entregado {
+      background: #e6f4ea;
+      color: #1e7e34;
+    }
+
+    .estado-badge.en-camino {
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    .estado-badge.cancelado {
+      background: #fdecea;
+      color: #c0392b;
+    }
+
+    .ver-detalle-btn {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--verde);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+    .ver-detalle-btn:hover { text-decoration: underline; }
+
+    /* ── BOTTOM NAV ── */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 430px;
+      height: var(--nav-h);
+      background: #fff;
+      border-top: 1px solid #e8e8e8;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      z-index: 60;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
+    }
+
+    .bottom-nav__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      text-decoration: none;
+      color: #aaa;
+      font-size: 0.65rem;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 12px;
+      min-width: 56px;
+    }
+
+    .bottom-nav__item .material-symbols-outlined { font-size: 24px; }
+
+    .bottom-nav__item.active { color: var(--verde); }
+    .bottom-nav__item.active .material-symbols-outlined {
+      font-variation-settings: 'FILL' 1;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header class="page-header">
+    <a href="perfil.html" class="page-header__back" aria-label="Volver">
+      <span class="material-symbols-outlined">arrow_back</span>
+    </a>
+    <h1 class="page-header__title">Historial de Pedidos</h1>
+    <div class="page-header__right"></div>
+  </header>
+
+  <main class="main">
+    <section class="historial-list" aria-label="Lista de pedidos">
+
+      <article class="pedido-card">
+        <div class="pedido-card__header">
+          <p class="pedido-card__orden">Orden #12345</p>
+          <p class="pedido-card__total">Q125.50</p>
+        </div>
+        <p class="pedido-card__fecha">15 Oct, 2023</p>
+        <div class="pedido-card__footer">
+          <span class="estado-badge entregado" role="status">Entregado</span>
+          <a href="#" class="ver-detalle-btn">Ver detalle ›</a>
+        </div>
+      </article>
+
+      <article class="pedido-card">
+        <div class="pedido-card__header">
+          <p class="pedido-card__orden">Orden #12344</p>
+          <p class="pedido-card__total">Q89.99</p>
+        </div>
+        <p class="pedido-card__fecha">12 Oct, 2023</p>
+        <div class="pedido-card__footer">
+          <span class="estado-badge en-camino" role="status">En camino</span>
+          <a href="#" class="ver-detalle-btn">Ver detalle ›</a>
+        </div>
+      </article>
+
+      <article class="pedido-card">
+        <div class="pedido-card__header">
+          <p class="pedido-card__orden">Orden #12343</p>
+          <p class="pedido-card__total">Q210.00</p>
+        </div>
+        <p class="pedido-card__fecha">05 Oct, 2023</p>
+        <div class="pedido-card__footer">
+          <span class="estado-badge cancelado" role="status">Cancelado</span>
+          <a href="#" class="ver-detalle-btn">Ver detalle ›</a>
+        </div>
+      </article>
+
+      <article class="pedido-card">
+        <div class="pedido-card__header">
+          <p class="pedido-card__orden">Orden #12342</p>
+          <p class="pedido-card__total">Q55.00</p>
+        </div>
+        <p class="pedido-card__fecha">28 Sep, 2023</p>
+        <div class="pedido-card__footer">
+          <span class="estado-badge entregado" role="status">Entregado</span>
+          <a href="#" class="ver-detalle-btn">Ver detalle ›</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+<nav class="bottom-nav" aria-label="Navegación principal">
+    <a href="index.html" class="bottom-nav__item">
+      <img src="img/casa.png" alt="Inicio" class="nav-img-icon">
+      <span>Inicio</span>
+    </a>
+    <a href="catalogo.html" class="bottom-nav__item">
+      <img src="img/catalogo.png" alt="Catálogo" class="nav-img-icon">
+      <span>Catálogo</span>
+    </a>
+    <a href="carrito.html" class="bottom-nav__item">
+      <div class="nav-carrito-wrap">
+        <img src="img/carro_de_compras.png" alt="Carrito" class="nav-img-icon">
+        <span class="badge-nav">3</span>
+      </div>
+      <span>Carrito</span>
+    </a>
+    <a href="historial.html" class="bottom-nav__item">
+      <img src="img/pedido.png" alt="Pedidos" class="nav-img-icon">
+      <span>Pedidos</span>
+    </a>
+    <a href="perfil.html" class="bottom-nav__item">
+      <img src="img/perfil.png" alt="Perfil" class="nav-img-icon">
+      <span>Perfil</span>
+    </a>
+  </nav>
+
+</div>
+</body>
+</html>

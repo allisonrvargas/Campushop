@@ -1,0 +1,348 @@
+/* =============================================
+   LAYOUT.CSS — Estructura principal
+   CampusShop · Mobile-First · Sin JS
+   ============================================= */
+
+/* ---------- Container ---------- */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  background: var(--blanco);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* ---------- Main ---------- */
+.main {
+  flex: 1;
+  padding-top: var(--header-h);
+  padding-bottom: calc(var(--nav-h) + 16px);
+  overflow-y: auto;
+}
+
+/* ---------- Header (Home) ---------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  height: var(--header-h);
+  background: var(--blanco);
+  border-bottom: 1px solid var(--gris-borde);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  z-index: 100;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+}
+
+.header__logo {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--negro);
+  letter-spacing: -0.01em;
+}
+
+.header__icon-btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition);
+  cursor: pointer;
+}
+.header__icon-btn:hover { background: var(--gris-suave); }
+
+/* ---------- Page Header (páginas internas) ---------- */
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  height: var(--header-h);
+  background: var(--blanco);
+  border-bottom: 1px solid var(--gris-borde);
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  align-items: center;
+  padding: 0 12px;
+  z-index: 100;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+}
+
+.page-header__back {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition);
+}
+.page-header__back:hover { background: var(--gris-suave); }
+
+.page-header__title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--negro);
+}
+
+.page-header__right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1.25rem;
+}
+
+/* ---------- Badge ---------- */
+.badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 18px;
+  height: 18px;
+  background: var(--verde-claro);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Bottom Nav ---------- */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  height: var(--nav-h);
+  background: var(--blanco);
+  border-top: 1px solid var(--gris-borde);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 100;
+  box-shadow: var(--shadow-nav);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.bottom-nav__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--gris-texto);
+  padding: 8px 4px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition);
+  cursor: pointer;
+}
+
+.bottom-nav__item .icon {
+  font-size: 1.3rem;
+  line-height: 1;
+  transition: transform var(--transition);
+}
+
+.bottom-nav__item:hover,
+.bottom-nav__item.active {
+  color: var(--verde);
+}
+.bottom-nav__item.active .icon,
+.bottom-nav__item:hover .icon {
+  transform: translateY(-1px);
+}
+
+/* ---------- Menú Sidebar (Checkbox hack sin JS) ---------- */
+.menu-toggle {
+  display: none;
+  position: absolute;
+}
+
+.menu-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 149;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.nav-sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: min(300px, 85vw);
+  height: 100dvh;
+  background: var(--verde);
+  z-index: 150;
+  padding: 32px 24px;
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cuando el checkbox está marcado → sidebar visible */
+.menu-toggle:checked ~ .menu-overlay {
+  display: block;
+  opacity: 1;
+}
+.menu-toggle:checked ~ .nav-sidebar {
+  left: 0;
+}
+
+.nav-sidebar__logo {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #a8d98f;
+  margin-bottom: 32px;
+  letter-spacing: -0.01em;
+}
+
+.nav-sidebar__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-sidebar__item a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: rgba(255,255,255,0.9);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  transition: background var(--transition), color var(--transition);
+}
+.nav-sidebar__item a:hover {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+}
+
+.nav-sidebar__divider {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  margin: 24px 0;
+}
+
+.nav-sidebar__carrito {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.08);
+}
+
+.badge-menu {
+  width: 24px;
+  height: 24px;
+  background: #a8d98f;
+  color: var(--verde);
+  font-size: 0.75rem;
+  font-weight: 800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Filtros Catálogo ---------- */
+.filtros {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  background: var(--blanco);
+  border-bottom: 1px solid var(--gris-borde);
+  position: sticky;
+  top: var(--header-h);
+  z-index: 50;
+}
+.filtros::-webkit-scrollbar { display: none; }
+
+.filtro-btn {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border: 1.5px solid var(--gris-borde);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--negro);
+  background: var(--blanco);
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.filtro-btn.active {
+  background: var(--verde);
+  color: var(--blanco);
+  border-color: var(--verde);
+}
+.filtro-btn:hover:not(.active) {
+  border-color: var(--verde);
+  color: var(--verde);
+}
+/* Contenedor principal flexible */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Se expande hasta 1200px, pero en celulares usa el 100% */
+    margin: 0 auto;
+    overflow-x: hidden; /* Evita que aparezca la barra de desplazamiento lateral */
+}
+
+/* El grid o malla donde van los productos */
+.productos-grid {
+    display: flex;
+    flex-wrap: wrap;    /* Permite que las tarjetas bajen si no caben */
+    gap: 15px;          /* Espacio entre tarjetas */
+    padding: 15px;
+    justify-content: center; /* Centra los productos */
+}
+/* Esto hace que las imágenes aparezcan pequeñas y centradas */
+.nav-img-icon {
+  width: 24px;   /* Tamaño pequeño para el menú */
+  height: 24px;
+  display: block;
+  margin: 0 auto 4px; /* Centra la imagen y da espacio al texto */
+  object-fit: contain;
+}
+
+.bottom-nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}

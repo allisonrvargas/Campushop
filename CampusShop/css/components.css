@@ -1,0 +1,204 @@
+/* =========================================
+   COMPONENTS.CSS - CampusShop
+   ========================================= */
+
+/* 1. CUADRÍCULA DE PRODUCTOS */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 15px;
+    padding: 15px;
+}
+
+
+
+/* 3. MODALES DE DETALLE (EL TRUCO CSS) */
+.product-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Oculto por defecto */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Cuando el ID del modal coincide con el # de la URL */
+.product-overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.product-detail-view {
+    background: white;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 20px;
+    position: relative;
+    padding: 20px;
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); }
+    to { transform: translateY(0); }
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+    line-height: 1;
+}
+
+.detail-container {
+    text-align: center;
+}
+
+.detail-image img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.detail-title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.detail-price {
+    font-size: 1.5rem;
+    color: var(--verde);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+/* 4. BOTONES */
+.add-to-cart-btn {
+    display: block;
+    background: var(--verde);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Área transparente para cerrar al hacer clic afuera */
+.overlay-close-area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+/* =========================================
+   CARRITO DE COMPRAS - ITEM
+   ========================================= */
+
+.carrito-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--blanco, #ffffff);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 15px;
+}
+
+.carrito-item__img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #f5f5f5;
+}
+
+.carrito-item__info {
+    flex: 1;
+}
+
+.carrito-item__nombre {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 4px 0;
+}
+
+.carrito-item__ref {
+    font-size: 0.8rem;
+    color: #888;
+    margin: 0 0 10px 0;
+}
+
+.carrito-item__cantidad {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty-btn {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #333;
+    transition: background 0.2s;
+}
+
+.qty-btn:active {
+    background: #eee;
+}
+
+.qty-num {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.carrito-item__acciones {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.carrito-item__delete {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #ff4d4d;
+    padding: 5px;
+}
+
+.carrito-item__precio {
+    color: var(--verde, #2ecc71);
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.carrito-item__subtotal {
+    font-size: 0.75rem;
+    color: #888;
+    text-transform: uppercase;
+    margin: 0;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusShop – Carrito Vacío</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== HEADER ===== -->
+  <header class="page-header">
+    <a href="index.html" class="page-header__back" aria-label="Volver">←</a>
+    <h1 class="page-header__title">Tu Carrito</h1>
+    <div class="page-header__right"></div>
+  </header>
+
+  <!-- ===== CONTENIDO ===== -->
+  <main class="main">
+
+    <!-- Estado vacío -->
+    <section class="vacio-container" aria-label="Carrito vacío">
+      <!-- Ilustración simple con CSS -->
+      <div class="vacio-icono" aria-hidden="true">🛒</div>
+
+      <h2 class="vacio-titulo">Tu carrito está vacío :(</h2>
+      <p class="vacio-desc">
+        Parece que aún no has añadido nada.<br />¡Explora nuestros productos!
+      </p>
+
+      <a href="catalogo.html" class="btn-primary" style="max-width: 280px;">
+        Explorar Catálogo
+      </a>
+    </section>
+
+  </main>
+
+  <!-- ===== BOTTOM NAV ===== -->
+<nav class="bottom-nav" aria-label="Navegación principal">
+    <a href="index.html" class="bottom-nav__item">
+      <img src="img/casa.png" alt="Inicio" class="nav-img-icon">
+      <span>Inicio</span>
+    </a>
+    <a href="catalogo.html" class="bottom-nav__item">
+      <img src="img/catalogo.png" alt="Catálogo" class="nav-img-icon">
+      <span>Catálogo</span>
+    </a>
+    <a href="carrito.html" class="bottom-nav__item">
+      <div class="nav-carrito-wrap">
+        <img src="img/carro_de_compras.png" alt="Carrito" class="nav-img-icon">
+        <span class="badge-nav">3</span>
+      </div>
+      <span>Carrito</span>
+    </a>
+    <a href="historial.html" class="bottom-nav__item">
+      <img src="img/pedido.png" alt="Pedidos" class="nav-img-icon">
+      <span>Pedidos</span>
+    </a>
+    <a href="perfil.html" class="bottom-nav__item">
+      <img src="img/perfil.png" alt="Perfil" class="nav-img-icon">
+      <span>Perfil</span>
+    </a>
+  </nav>
+
+</div>
+</body>
+</html>

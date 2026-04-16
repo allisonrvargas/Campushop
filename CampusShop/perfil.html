@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusShop – Perfil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --verde: #2D5016;
+      --verde-light: #3a6b1c;
+      --blanco: #ffffff;
+      --gris-bg: #f5f5f5;
+      --texto: #1a1a1a;
+      --radius: 14px;
+      --nav-h: 68px;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--gris-bg);
+      color: var(--texto);
+    }
+
+    .container {
+      max-width: 430px;
+      margin: 0 auto;
+      background: var(--gris-bg);
+      min-height: 100vh;
+    }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      height: 60px;
+      background: var(--verde);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .page-header__back {
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .page-header__title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .page-header__right { width: 32px; }
+
+    /* ── MAIN ── */
+    .main {
+      padding: 0 0 calc(var(--nav-h) + 16px);
+    }
+
+    /* ── PERFIL HEADER ── */
+    .perfil-header {
+      background: var(--verde);
+      padding: 24px 20px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .perfil-avatar {
+      width: 80px; height: 80px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid rgba(255,255,255,0.4);
+      margin-bottom: 4px;
+    }
+
+    .perfil-avatar .material-symbols-outlined {
+      font-size: 48px;
+      color: #fff;
+      font-variation-settings: 'FILL' 1;
+    }
+
+    .perfil-nombre {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .perfil-email {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.75);
+    }
+
+    /* ── OPCIONES ── */
+    .perfil-opciones-wrap {
+      padding: 16px 16px;
+    }
+
+    .perfil-opciones {
+      background: var(--blanco);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    .perfil-opcion {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 20px;
+      text-decoration: none;
+      color: var(--texto);
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-bottom: 1px solid #f0f0f0;
+      transition: background 0.15s;
+    }
+
+    .perfil-opcion:last-child { border-bottom: none; }
+    .perfil-opcion:hover { background: #f8f8f8; }
+
+    .perfil-opcion .material-symbols-outlined {
+      font-size: 22px;
+      color: var(--verde);
+      width: 26px;
+      flex-shrink: 0;
+    }
+
+    .perfil-opcion .chevron {
+      margin-left: auto;
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    .perfil-opcion.danger {
+      color: #c0392b;
+      margin-top: 12px;
+    }
+
+    .perfil-opcion.danger .material-symbols-outlined {
+      color: #c0392b;
+    }
+
+    .danger-wrap {
+      padding: 0 16px 16px;
+    }
+
+    .danger-card {
+      background: #fff0ef;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    /* ── BOTTOM NAV ── */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 430px;
+      height: var(--nav-h);
+      background: #fff;
+      border-top: 1px solid #e8e8e8;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      z-index: 60;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
+    }
+
+    .bottom-nav__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      text-decoration: none;
+      color: #aaa;
+      font-size: 0.65rem;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 12px;
+      min-width: 56px;
+    }
+
+    .bottom-nav__item .material-symbols-outlined { font-size: 24px; }
+    .bottom-nav__item.active { color: var(--verde); }
+    .bottom-nav__item.active .material-symbols-outlined {
+      font-variation-settings: 'FILL' 1;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header class="page-header">
+    <a href="index.html" class="page-header__back" aria-label="Volver">
+      <span class="material-symbols-outlined">arrow_back</span>
+    </a>
+    <h1 class="page-header__title">Perfil</h1>
+    <div class="page-header__right"></div>
+  </header>
+
+  <main class="main">
+
+    <!-- Avatar y datos -->
+    <section class="perfil-header" aria-label="Información del usuario">
+      <div class="perfil-avatar" aria-hidden="true">
+        <span class="material-symbols-outlined">account_circle</span>
+      </div>
+      <p class="perfil-nombre">Ana Torres</p>
+      <p class="perfil-email">ana.torres@email.com</p>
+    </section>
+
+    <!-- Opciones -->
+    <div class="perfil-opciones-wrap">
+      <div class="perfil-opciones">
+
+        <a href="historial.html" class="perfil-opcion">
+          <span class="material-symbols-outlined">inventory_2</span>
+          <span>Mis Pedidos</span>
+          <span class="material-symbols-outlined chevron">chevron_right</span>
+        </a>
+
+        <a href="#" class="perfil-opcion">
+          <span class="material-symbols-outlined">location_on</span>
+          <span>Direcciones</span>
+          <span class="material-symbols-outlined chevron">chevron_right</span>
+        </a>
+
+        <a href="#" class="perfil-opcion">
+          <span class="material-symbols-outlined">settings</span>
+          <span>Configuración</span>
+          <span class="material-symbols-outlined chevron">chevron_right</span>
+        </a>
+
+        <a href="#" class="perfil-opcion">
+          <span class="material-symbols-outlined">favorite</span>
+          <span>Favoritos</span>
+          <span class="material-symbols-outlined chevron">chevron_right</span>
+        </a>
+
+        <a href="#" class="perfil-opcion">
+          <span class="material-symbols-outlined">notifications</span>
+          <span>Notificaciones</span>
+          <span class="material-symbols-outlined chevron">chevron_right</span>
+        </a>
+
+        <a href="#" class="perfil-opcion">
+          <span class="material-symbols-outlined">help</span>
+          <span>Ayuda</span>
+          <span class="material-symbols-outlined chevron">chevron_right</span>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Cerrar Sesión -->
+    <div class="danger-wrap">
+      <div class="danger-card">
+        <a href="index.html" class="perfil-opcion danger">
+          <span class="material-symbols-outlined">logout</span>
+          <span>Cerrar Sesión</span>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+<nav class="bottom-nav" aria-label="Navegación principal">
+    <a href="index.html" class="bottom-nav__item">
+      <img src="img/casa.png" alt="Inicio" class="nav-img-icon">
+      <span>Inicio</span>
+    </a>
+    <a href="catalogo.html" class="bottom-nav__item">
+      <img src="img/catalogo.png" alt="Catálogo" class="nav-img-icon">
+      <span>Catálogo</span>
+    </a>
+    <a href="carrito.html" class="bottom-nav__item">
+      <div class="nav-carrito-wrap">
+        <img src="img/carro_de_compras.png" alt="Carrito" class="nav-img-icon">
+        <span class="badge-nav">3</span>
+      </div>
+      <span>Carrito</span>
+    </a>
+    <a href="historial.html" class="bottom-nav__item">
+      <img src="img/pedido.png" alt="Pedidos" class="nav-img-icon">
+      <span>Pedidos</span>
+    </a>
+    <a href="perfil.html" class="bottom-nav__item">
+      <img src="img/perfil.png" alt="Perfil" class="nav-img-icon">
+      <span>Perfil</span>
+    </a>
+  </nav>
+
+</div>
+</body>
+</html>

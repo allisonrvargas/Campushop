@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2D5016" />
+  <title>CampusShop – Catálogo</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+<div class="container">
+
+  <header class="header">
+    <a href="index.html" class="header__back" aria-label="Volver">←</a>
+    <span class="header__logo">CampusShop</span>
+    <nav class="header__nav">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html" class="active">Catálogo</a>
+      <a href="historial.html">Pedidos</a>
+      <a href="perfil.html">Perfil</a>
+    </nav>
+    <a href="carrito.html" class="header__icon-btn" aria-label="Ver carrito">
+      🛒<span class="badge">3</span>
+    </a>
+  </header>
+
+  <!-- Radio inputs para filtrado CSS-only (deben ser hermanos de main) -->
+  <input type="radio" id="f-todos"      name="filtro" class="filtro-radio" checked />
+  <input type="radio" id="f-chumpas"    name="filtro" class="filtro-radio" />
+  <input type="radio" id="f-camisas"    name="filtro" class="filtro-radio" />
+  <input type="radio" id="f-pantalones" name="filtro" class="filtro-radio" />
+
+  <main class="main">
+
+    <div class="search-bar" role="search">
+      <span class="search-bar__icon">🔍</span>
+      <input type="search" placeholder="Buscar en el catálogo..." aria-label="Buscar" />
+    </div>
+
+    <div class="filtros">
+      <label for="f-todos"      class="filtro-btn lb-todos">Todos</label>
+      <label for="f-chumpas"    class="filtro-btn lb-chumpas">Chumpas</label>
+      <label for="f-camisas"    class="filtro-btn lb-camisas">Camisas</label>
+      <label for="f-pantalones" class="filtro-btn lb-pantalones">Pantalones</label>
+    </div>
+
+    <!-- Todos los productos en una sola grilla con clases de categoría -->
+    <div class="productos-grid">
+
+      <!-- ── CHUMPAS ── -->
+      <div class="product-card cat-chumpa">
+        <a href="producto.html#chumpa-blanca">
+          <div class="product-card__img-wrap"><img src="img/Chumpa_blanca.png" alt="Chumpa Blanca Campus" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Chumpa Blanca Campus</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q249.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card cat-chumpa">
+        <a href="producto.html#chumpa-negra">
+          <div class="product-card__img-wrap"><img src="img/chumpa_negra.png" alt="Chumpa Negra Premium" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Chumpa Negra Premium</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q289.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card cat-chumpa">
+        <a href="producto.html#chaqueta-cafe">
+          <div class="product-card__img-wrap"><img src="img/chaqueta_cafe_negra.png" alt="Chaqueta Café Negra" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Chaqueta Café Negra</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q300.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card cat-chumpa">
+        <a href="producto.html#chumpa-azul">
+          <div class="product-card__img-wrap"><img src="img/Chumpa_azul.png" alt="Chumpa Azul" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Chumpa Azul</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q200.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card cat-chumpa">
+        <a href="producto.html#chumpa-gruesa">
+          <div class="product-card__img-wrap"><img src="img/chumpa_gruesa_azul.png" alt="Chumpa Gruesa Azul" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Chumpa Gruesa Azul</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q400.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card cat-chumpa">
+        <a href="producto.html#chumpa-rosa">
+          <div class="product-card__img-wrap"><img src="img/chumpa_negra_y_rosa.png" alt="Chumpa Negra y Rosa" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Chumpa Negra y Rosa</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q329.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- ── CAMISAS ── -->
+      <div class="product-card cat-camisa">
+        <a href="producto.html#camisa-blanca">
+          <div class="product-card__img-wrap"><img src="img/camisa_blanca.png" alt="Camisa Blanca Casual" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Camisa Blanca Casual</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q179.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card cat-camisa">
+        <a href="producto.html#polo-azul">
+          <div class="product-card__img-wrap"><img src="img/Camisa_azul_con_cuello.png" alt="Polo Azul Navy" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Polo Azul Navy</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q189.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card cat-camisa">
+        <a href="producto.html#camisa-lineas">
+          <div class="product-card__img-wrap"><img src="img/Camisa_blanca_con_lineas_negras.png" alt="Camisa Blanca con Líneas" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Camisa Blanca con Líneas</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q200.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card cat-camisa">
+        <a href="producto.html#camisa-cafe">
+          <div class="product-card__img-wrap"><img src="img/Camisa_cafe_con_cuello.png" alt="Camisa Café con Cuello" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Camisa Café con Cuello</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q180.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card cat-camisa">
+        <a href="producto.html#camisa-amarilla">
+          <div class="product-card__img-wrap"><img src="img/Camisa_corta_amarilla.png" alt="Camisa Corta Amarilla" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Camisa Corta Amarilla</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q75.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card cat-camisa">
+        <a href="producto.html#camisa-ml-negra">
+          <div class="product-card__img-wrap"><img src="img/camisa_manga_larga_negra.png" alt="Camisa Manga Larga Negra" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Camisa Manga Larga Negra</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q200.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card cat-camisa">
+        <a href="producto.html#camisa-negra">
+          <div class="product-card__img-wrap"><img src="img/camisa_negra.png" alt="Camisa Negra" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Camisa Negra</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q180.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card cat-camisa">
+        <a href="producto.html#camisa-rayas">
+          <div class="product-card__img-wrap"><img src="img/Camisa_negra_con_rayas.png" alt="Camisa Negra con Rayas" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Camisa Negra con Rayas</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q300.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- ── PANTALONES ── -->
+      <div class="product-card cat-pantalon">
+        <a href="producto.html#pantalon-celeste">
+          <div class="product-card__img-wrap"><img src="img/Pantalon_formal_celeste.png" alt="Pantalón Formal Celeste" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Pantalón Formal Celeste</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q250.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card cat-pantalon">
+        <a href="producto.html#pantalon-negro">
+          <div class="product-card__img-wrap"><img src="img/pantalon_negro_formal_parte_trasera.png" alt="Pantalón Negro Formal" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Pantalón Negro Formal</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q500.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card cat-pantalon">
+        <a href="producto.html#pantalon-rosa-c">
+          <div class="product-card__img-wrap"><img src="img/pantalon_rosa_claro.png" alt="Pantalón Rosa Claro" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Pantalón Rosa Claro</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q450.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card cat-pantalon">
+        <a href="producto.html#pantalon-rosa-f">
+          <div class="product-card__img-wrap"><img src="img/Pantalon_rosa_fuerte.png" alt="Pantalón Rosa Fuerte" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Pantalón Rosa Fuerte</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q200.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card cat-pantalon">
+        <a href="producto.html#pantalon-verde">
+          <div class="product-card__img-wrap"><img src="img/Pantalon_verde.png" alt="Pantalón Verde" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Pantalón Verde</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q120.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card cat-pantalon">
+        <a href="producto.html#pants-blanco">
+          <div class="product-card__img-wrap"><img src="img/Pants_blanco.png" alt="Pants Blanco" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Pants Blanco</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q150.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card cat-pantalon">
+        <a href="producto.html#pants-negro">
+          <div class="product-card__img-wrap"><img src="img/Pants_negro.png" alt="Pants Negro" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Pants Negro</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q350.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card cat-pantalon">
+        <a href="producto.html#licra-azul">
+          <div class="product-card__img-wrap"><img src="img/licra_azul.png" alt="Licra Azul" /></div>
+          <div class="product-card__info">
+            <p class="product-card__nombre">Licra Azul</p>
+            <div class="product-card__footer">
+              <p class="product-card__precio">Q95.00</p>
+              <span class="product-card__cart-btn">+</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <nav class="bottom-nav" aria-label="Navegación">
+    <a href="index.html" class="bottom-nav__item">
+      <img src="img/casa.png" alt="Inicio" class="nav-img-icon" />
+      <span>Inicio</span>
+    </a>
+    <a href="catalogo.html" class="bottom-nav__item active">
+      <img src="img/catalogo.png" alt="Catálogo" class="nav-img-icon" />
+      <span>Catálogo</span>
+    </a>
+    <a href="carrito.html" class="bottom-nav__item">
+      <div class="nav-carrito-wrap">
+        <img src="img/carro_de_compras.png" alt="Carrito" class="nav-img-icon" />
+        <span class="badge-nav">3</span>
+      </div>
+      <span>Carrito</span>
+    </a>
+    <a href="historial.html" class="bottom-nav__item">
+      <img src="img/pedido.png" alt="Pedidos" class="nav-img-icon" />
+      <span>Pedidos</span>
+    </a>
+    <a href="perfil.html" class="bottom-nav__item">
+      <img src="img/perfil.png" alt="Perfil" class="nav-img-icon" />
+      <span>Perfil</span>
+    </a>
+  </nav>
+
+</div>
+</body>
+</html>

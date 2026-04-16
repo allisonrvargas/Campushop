@@ -1,0 +1,26 @@
+/* Diseño para CELULARES (Pantalla completa pero en 2 columnas) */
+.productos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px;
+    justify-content: center;
+}
+
+.product-card {
+    flex: 1 1 calc(50% - 20px); /* 2 productos por fila */
+    min-width: 150px;
+}
+
+/* Diseño para COMPUTADORA (Agrandar pantalla) */
+@media (min-width: 1024px) {
+    .product-card {
+        flex: 1 1 calc(25% - 20px); /* 4 productos por fila */
+        max-width: 280px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}

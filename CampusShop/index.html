@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2D5016" />
+  <title>CampusShop – Inicio</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== MENÚ LATERAL (checkbox hack sin JS) ===== -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+  <!-- Overlay oscuro -->
+  <label for="menu-toggle" class="menu-overlay"></label>
+
+  <!-- Sidebar -->
+  <nav class="nav-sidebar" aria-label="Menú principal">
+    <div class="nav-sidebar__logo">CampusShop</div>
+    <ul class="nav-sidebar__list">
+      <li class="nav-sidebar__item">
+        <a href="catalogo.html"><span class="icon">☰</span> Todos los productos</a>
+      </li>
+      <li class="nav-sidebar__item">
+        <a href="catalogo.html"><span class="icon">🧥</span> Chumpas / Abrigos</a>
+      </li>
+      <li class="nav-sidebar__item">
+        <a href="catalogo.html"><span class="icon">👕</span> Camisas</a>
+      </li>
+      <li class="nav-sidebar__item">
+        <a href="catalogo.html"><span class="icon">👖</span> Pantalones</a>
+      </li>
+    </ul>
+    <hr class="nav-sidebar__divider" />
+    <div class="nav-sidebar__carrito">
+      <a href="carrito.html" style="display:flex;align-items:center;gap:14px;color:#fff;font-size:1rem;font-weight:600;text-decoration:none;">
+        <span class="icon">🛒</span> Carrito
+      </a>
+      <span class="badge-menu">3</span>
+    </div>
+  </nav>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <label for="menu-toggle" class="header__icon-btn" aria-label="Abrir menú" style="font-size:1.4rem;">☰</label>
+    <span class="header__logo">CampusShop</span>
+    <a href="carrito.html" class="header__icon-btn" aria-label="Ver carrito">
+      🛒<span class="badge">3</span>
+    </a>
+  </header>
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main class="main">
+
+    <!-- Buscador -->
+    <div class="search-bar" role="search">
+      <span class="search-bar__icon">🔍</span>
+      <input type="search" placeholder="Buscar productos, marcas..." aria-label="Buscar productos" />
+    </div>
+
+    <!-- Categorías -->
+    <h2 class="section-title">Categorías Populares</h2>
+    <nav class="categorias" aria-label="Categorías">
+      <a href="catalogo.html" class="categoria-item">
+        <div class="categoria-item__icono">🧥</div>
+        <span class="categoria-item__nombre">Chumpas</span>
+      </a>
+      <a href="catalogo.html" class="categoria-item">
+        <div class="categoria-item__icono">👕</div>
+        <span class="categoria-item__nombre">Camisas</span>
+      </a>
+      <a href="catalogo.html" class="categoria-item">
+        <div class="categoria-item__icono">👖</div>
+        <span class="categoria-item__nombre">Pantalones</span>
+      </a>
+      <a href="catalogo.html" class="categoria-item">
+        <div class="categoria-item__icono">🩱</div>
+        <span class="categoria-item__nombre">Licras</span>
+      </a>
+      <a href="catalogo.html" class="categoria-item">
+        <div class="categoria-item__icono">🏃</div>
+        <span class="categoria-item__nombre">Pants</span>
+      </a>
+    </nav>
+
+    <!-- Novedades - usando imágenes reales -->
+    <h2 class="section-title">Novedades para ti</h2>
+    <section class="productos-grid" aria-label="Productos destacados">
+
+
+  </main>
+
+  <!-- ===== BOTTOM NAV ===== -->
+<nav class="bottom-nav" aria-label="Navegación principal">
+    <a href="index.html" class="bottom-nav__item">
+      <img src="img/casa.png" alt="Inicio" class="nav-img-icon">
+      <span>Inicio</span>
+    </a>
+    <a href="catalogo.html" class="bottom-nav__item">
+      <img src="img/catalogo.png" alt="Catálogo" class="nav-img-icon">
+      <span>Catálogo</span>
+    </a>
+    <a href="carrito.html" class="bottom-nav__item">
+      <div class="nav-carrito-wrap">
+        <img src="img/carro_de_compras.png" alt="Carrito" class="nav-img-icon">
+        <span class="badge-nav">3</span>
+      </div>
+      <span>Carrito</span>
+    </a>
+    <a href="historial.html" class="bottom-nav__item">
+      <img src="img/pedido.png" alt="Pedidos" class="nav-img-icon">
+      <span>Pedidos</span>
+    </a>
+    <a href="perfil.html" class="bottom-nav__item">
+      <img src="img/perfil.png" alt="Perfil" class="nav-img-icon">
+      <span>Perfil</span>
+    </a>
+  </nav>
+
+</div>
+</body>
+</html>

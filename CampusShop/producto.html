@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusShop – Detalle del Producto</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+<div class="container">
+
+  <header class="page-header">
+    <a href="catalogo.html" class="page-header__back" aria-label="Volver">←</a>
+    <h1 class="page-header__title">Detalles del Producto</h1>
+    <a href="carrito.html" class="header__icon-btn page-header__right" aria-label="Ver carrito" style="position:relative;">🛒<span class="badge">3</span></a>
+  </header>
+
+  <main class="main" style="padding-bottom: 100px;">
+
+    <img class="producto-img-hero" src="img/Chumpa_blanca.png" alt="Chumpa Blanca Campus" />
+
+    <article class="producto-info">
+      <h1 class="producto-nombre">Chumpa Blanca Campus</h1>
+      <p class="producto-precio">Q249.00</p>
+      <p class="producto-desc">
+        Chumpa oficial de Campuslands. Confeccionada con materiales de alta calidad,
+        diseño cómodo y moderno ideal para el ambiente universitario. Lleva el logo
+        oficial bordado en el pecho izquierdo.
+      </p>
+
+      <p class="talla-label font-bold">Talla</p>
+      <div class="tallas" role="group" aria-label="Seleccionar talla">
+        <button class="talla-btn">S</button>
+        <button class="talla-btn active">M</button>
+        <button class="talla-btn">L</button>
+        <button class="talla-btn">XL</button>
+      </div>
+    </article>
+
+    <div style="padding: 16px 20px 20px;">
+      <a href="checkout.html" class="btn-primary">Agregar al carrito</a>
+    </div>
+
+    <section class="relacionados" aria-label="Productos relacionados">
+      <h2 class="section-title" style="padding-left:0; padding-top:8px;">Productos Relacionados</h2>
+      <div class="relacionados-scroll">
+
+        <a href="producto.html" class="relacionado-card">
+          <img src="img/Chumpa_azul.png" alt="Chumpa Azul" loading="lazy" />
+          <div class="relacionado-card__info">
+            <p class="relacionado-card__nombre">Chumpa Azul</p>
+            <p class="relacionado-card__precio">Q249.00</p>
+          </div>
+        </a>
+
+        <a href="producto.html" class="relacionado-card">
+          <img src="img/chumpa_negra.png" alt="Chumpa Negra" loading="lazy" />
+          <div class="relacionado-card__info">
+            <p class="relacionado-card__nombre">Chumpa Negra</p>
+            <p class="relacionado-card__precio">Q289.00</p>
+          </div>
+        </a>
+
+        <a href="producto.html" class="relacionado-card">
+          <img src="img/chumpa_negra_y_rosa.png" alt="Chumpa Negra y Rosa" loading="lazy" />
+          <div class="relacionado-card__info">
+            <p class="relacionado-card__nombre">Chumpa N. y Rosa</p>
+            <p class="relacionado-card__precio">Q329.00</p>
+          </div>
+        </a>
+
+        <a href="producto.html" class="relacionado-card">
+          <img src="img/chaqueta_cafe_negra.png" alt="Chaqueta Café Negra" loading="lazy" />
+          <div class="relacionado-card__info">
+            <p class="relacionado-card__nombre">Chaqueta Café</p>
+            <p class="relacionado-card__precio">Q299.00</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+</div>
+</body>
+</html>

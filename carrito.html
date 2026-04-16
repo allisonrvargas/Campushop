@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusShop – Mi Carrito</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+<div class="container">
+
+  <header class="header">
+    <a href="index.html" class="header__back" aria-label="Volver">←</a>
+    <span class="header__logo">CampusShop</span>
+    <nav class="header__nav">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="historial.html">Pedidos</a>
+      <a href="perfil.html">Perfil</a>
+    </nav>
+    <a href="carrito.html" class="header__icon-btn" aria-label="Ver carrito">
+      🛒<span class="badge">3</span>
+    </a>
+  </header>
+
+  <main class="main" style="padding-bottom: 0;">
+
+    <section aria-label="Productos en carrito">
+
+      <article class="carrito-item">
+        <img class="carrito-item__img" src="img/Chumpa_blanca.png" alt="Chumpa Blanca Campus" />
+        <div class="carrito-item__info">
+          <p class="carrito-item__nombre">Chumpa Blanca Campus</p>
+          <p class="carrito-item__ref">Ref: #SKU0001</p>
+          <div class="carrito-item__cantidad">
+            <button class="qty-btn" aria-label="Disminuir">−</button>
+            <span class="qty-num">1</span>
+            <button class="qty-btn" aria-label="Aumentar">+</button>
+          </div>
+        </div>
+        <div class="carrito-item__acciones">
+          <button class="carrito-item__delete" aria-label="Eliminar">🗑</button>
+          <p class="carrito-item__precio">Q249.00</p>
+          <p class="carrito-item__subtotal">subtotal</p>
+        </div>
+      </article>
+
+      <article class="carrito-item">
+        <img class="carrito-item__img" src="img/Camisa_azul_con_cuello.png" alt="Camisa Azul con Cuello" />
+        <div class="carrito-item__info">
+          <p class="carrito-item__nombre">Camisa Azul con Cuello</p>
+          <p class="carrito-item__ref">Ref: #SKU0015</p>
+          <div class="carrito-item__cantidad">
+            <button class="qty-btn" aria-label="Disminuir">−</button>
+            <span class="qty-num">1</span>
+            <button class="qty-btn" aria-label="Aumentar">+</button>
+          </div>
+        </div>
+        <div class="carrito-item__acciones">
+          <button class="carrito-item__delete" aria-label="Eliminar">🗑</button>
+          <p class="carrito-item__precio">Q189.00</p>
+          <p class="carrito-item__subtotal">subtotal</p>
+        </div>
+      </article>
+
+      <article class="carrito-item">
+        <img class="carrito-item__img" src="img/Cargo_formal_corinto.png" alt="Cargo Formal Corinto" />
+        <div class="carrito-item__info">
+          <p class="carrito-item__nombre">Cargo Formal Corinto</p>
+          <p class="carrito-item__ref">Ref: #SKU0022</p>
+          <div class="carrito-item__cantidad">
+            <button class="qty-btn" aria-label="Disminuir">−</button>
+            <span class="qty-num">1</span>
+            <button class="qty-btn" aria-label="Aumentar">+</button>
+          </div>
+        </div>
+        <div class="carrito-item__acciones">
+          <button class="carrito-item__delete" aria-label="Eliminar">🗑</button>
+          <p class="carrito-item__precio">Q229.00</p>
+          <p class="carrito-item__subtotal">subtotal</p>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="resumen" aria-label="Resumen del pedido">
+      <div class="resumen__row"><span>Subtotal</span><span>Q667.00</span></div>
+      <div class="resumen__row"><span>Envío</span><span>Q25.00</span></div>
+      <div class="resumen__row total"><span>Total</span><span>Q692.00</span></div>
+      <div class="resumen__btn">
+        <a href="checkout.html" class="btn-primary">Proceder al Pago</a>
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="bottom-nav" aria-label="Navegación">
+    <a href="index.html" class="bottom-nav__item">
+      <img src="img/casa.png" alt="Inicio" class="nav-img-icon" />
+      <span>Inicio</span>
+    </a>
+    <a href="catalogo.html" class="bottom-nav__item">
+      <img src="img/catalogo.png" alt="Catálogo" class="nav-img-icon" />
+      <span>Catálogo</span>
+    </a>
+    <a href="carrito.html" class="bottom-nav__item active">
+      <div class="nav-carrito-wrap">
+        <img src="img/carro_de_compras.png" alt="Carrito" class="nav-img-icon" />
+        <span class="badge-nav">3</span>
+      </div>
+      <span>Carrito</span>
+    </a>
+    <a href="historial.html" class="bottom-nav__item">
+      <img src="img/pedido.png" alt="Pedidos" class="nav-img-icon" />
+      <span>Pedidos</span>
+    </a>
+    <a href="perfil.html" class="bottom-nav__item">
+      <img src="img/perfil.png" alt="Perfil" class="nav-img-icon" />
+      <span>Perfil</span>
+    </a>
+  </nav>
+
+</div>
+</body>
+</html>
