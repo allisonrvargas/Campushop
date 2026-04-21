@@ -14,3 +14,15 @@
 @media (min-width: 1024px) {
   .productos-grid { grid-template-columns: repeat(4, 1fr); }
 }
+
+@media (max-width: 768px) {
+  .blog-container {
+      grid-template-columns: 100%;
+  }
+  .blog-card {
+      flex-direction: column;
+  }
+  .card-image img {
+      width: 100%;
+  }
+}
