@@ -1,0 +1,16 @@
+/* ── Responsive ── */
+
+@media (min-width: 600px) {
+  .productos-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 768px) {
+  .bottom-nav { display: none; }
+  .header__nav { display: flex; }
+  .main { padding-bottom: 32px; }
+  .productos-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .productos-grid { grid-template-columns: repeat(4, 1fr); }
+}

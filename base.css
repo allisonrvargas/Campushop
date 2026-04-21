@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  /* General */
+  --primario:        #7B2CBF; /* Violeta principal */
+  --primario-med:    #e17dea; /* + compras*/
+  --primario-claro:  #ec0d9ead; /* Bordes, Fondo categorias, borde buscador */
+  --primario-bg:     #d947bc6d; /* +, carrito, categorias   */
+  
+
+  /* Colores Neutros */
+  --blanco:          #ffffff; /* Fondo  */
+  --gris-suave:      #f9fafb;  /* Fondo proceder pago, área del buscador */
+  --gris-borde:      #e5e7eb; /* Color de fondo, bordes  */
+  --gris-texto:      #4b5563; /* Descripciones de producto, secundarios  */
+  --negro:           #111827;  /* Títulos importantes y precios   */
+
+  /* Sombras y Efectos */
+  --shadow-card:     0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-nav:      0 -2px 16px rgba(0, 0, 0, 0.08); /*  barra del navegador    */
+  --shadow-btn:      0 4px 16px rgba(123, 44, 191, 0.25); /* Botones pagar */
+  --transition:      0.3s ease; /* tiempo de transición */
+  
+  /* Medidas */
+  --header-h:        60px; /* altura del encabezado, CAMPUSSHOP */
+  --nav-h:           68px; /* altura de la barra de navegación */
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--negro);
+  background: var(--gris-suave);
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+button { font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; background: none; }
+ul, ol { list-style: none; }
+input, textarea, select { font-family: 'DM Sans', sans-serif; font-size: 15px; }
+h1, h2, h3, h4 { font-family: 'Syne', sans-serif; line-height: 1.2; }
+
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 16px 24px;
+  background: var(--primario);
+  color: var(--blanco);
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700; 
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: var(--shadow-btn);
+  transition: background var(--transition), transform var(--transition);
+}
+.btn-primary:hover { background: var(--primario); transform: translateY(-2px); }
+.btn-primary:active { transform: translateY(0); }
+
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--negro);
+  padding: 20px 20px 10px;
+}
