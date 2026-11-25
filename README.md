@@ -1,4 +1,7 @@
 # 🛒 CAMPUSSHOP
+
+[![Licencia: MIT](https://img.shields.io/badge/licencia-MIT-green.svg)](LICENSE)
+[![Demo](https://img.shields.io/badge/demo-en%20l%C3%ADnea-a855f7)](https://allisonrvargas.github.io/Campushop/)
 ## 🎓 E-Commerce Académico | Mobile-First
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) 
@@ -51,9 +54,18 @@ He trabajado en la maquetación de **8 pantallas clave** para el flujo de la tie
 ---
 
 ### ⚙️ CÓMO EJECUTARLO
+
+**Demo en línea:** https://allisonrvargas.github.io/Campushop/
+
+O en local, sin instalar nada:
 1. Descarga o clona el repositorio.
 2. Abre el archivo `index.html` en tu navegador.
 3. ¡Explora la interfaz navegando por los diferentes botones!
 
 ---
 **Desarrollado con pasión por [Allison R. Vargas](https://github.com/allisonrvargas)**
+
+---
+
+### 📄 LICENCIA
+MIT
