@@ -1,5 +1,7 @@
 # 🛒 CAMPUSSHOP
 
+[![CI](https://github.com/allisonrvargas/Campushop/actions/workflows/ci.yml/badge.svg)](https://github.com/allisonrvargas/Campushop/actions/workflows/ci.yml)
+
 [![Licencia: MIT](https://img.shields.io/badge/licencia-MIT-green.svg)](LICENSE)
 [![Demo](https://img.shields.io/badge/demo-en%20l%C3%ADnea-a855f7)](https://allisonrvargas.github.io/Campushop/)
 ## 🎓 E-Commerce Académico | Mobile-First
@@ -41,6 +43,17 @@ He trabajado en la maquetación de **8 pantallas clave** para el flujo de la tie
 | **👤 Perfil** | Datos del usuario y configuración. |
 | **📜 Historial** | Registro de estados de pedidos. |
 | **🏜️ Vacíos** | Pantallas de cortesía cuando no hay datos. |
+
+---
+
+### 🧪 PRUEBAS
+
+```bash
+npm test
+```n
+30 pruebas de integridad con `node:test` (no necesitan instalar nada): existen las 8 vistas, **ninguna página usa JavaScript** (ni `<script>`, ni eventos en línea, ni enlaces `javascript:`), cada página tiene doctype, idioma, viewport (mobile-first) y título, carga los 4 archivos CSS, todas las imágenes tienen texto alternativo y todo archivo local que se enlaza existe. El CI las ejecuta en cada cambio.
+
+Estas pruebas encontraron dos errores que ya se corrigieron: un icono con la ruta `img/blogg` sin extensión y un botón de volver con `javascript:history.back()`, que rompía el reto de no usar JavaScript.
 
 ---
 

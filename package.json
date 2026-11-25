@@ -1,0 +1,12 @@
+{
+  "name": "campushop",
+  "version": "1.0.0",
+  "description": "Tienda en línea mobile-first hecha solo con HTML y CSS. Solo tiene pruebas de integridad del sitio estático.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "engines": { "node": ">=20" },
+  "license": "MIT"
+}
